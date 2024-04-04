@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import Button from "@mui/material/Button";
 import { DiCodrops } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
-import { Bio } from "../data/constants";
+
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
   height: 80px;
@@ -21,6 +20,7 @@ const Nav = styled.div`
     transition: 0.8s all ease;
   }
   transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
 `;
 
 const NavContainer = styled.div`
@@ -32,6 +32,7 @@ const NavContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
+  position: sticky;
 `;
 
 const NavLogo = styled.div`
@@ -85,16 +86,6 @@ const NavItem = styled.a`
 
   &.active {
     border-bottom: 2px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 6px;
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
 
@@ -231,22 +222,6 @@ const Navbar = () => {
           <NavItem href="#projects">Projects</NavItem>
           <NavItem href="#education">Education</NavItem>
         </NavItems>
-        <ButtonContainer>
-          <Link href={Bio.github} target="_blank">
-            <Button
-              variant="outlined"
-              sx={{
-                width: "11rem",
-                height: "3rem",
-                fontWeight: 500,
-                borderRadius: "14px",
-                fontSize: "15px",
-              }}
-            >
-              GitHub Profile
-            </Button>
-          </Link>{" "}
-        </ButtonContainer>
       </NavContainer>
       {isOpen && (
         <MobileMenu isOpen={isOpen}>
@@ -294,25 +269,6 @@ const Navbar = () => {
             >
               Education
             </MobileLink>
-          </Link>
-          <Link
-            href={Bio.github}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <Button
-              variant="contained"
-              color="info"
-              sx={{
-                width: "11rem",
-                height: "3rem",
-                fontWeight: 500,
-                borderRadius: "12px",
-                fontSize: "15px",
-              }}
-            >
-              GitHub Profile
-            </Button>
           </Link>
         </MobileMenu>
       )}
