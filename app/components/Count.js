@@ -38,7 +38,7 @@ const Count = () => {
             borderRadius: "4px 0 0 4px",
           }}
         >
-          Visitors:
+          Profile views:
         </span>
         <span
           style={{
