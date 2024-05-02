@@ -6,7 +6,7 @@ export const Bio = {
   quote: "The only way to do great work is to love what you do.",
   github: "https://github.com/Abi-097",
   resume:
-    "https://drive.google.com/file/d/1N_UT9xOrE_dvLjChj9SN5I4yd69jdAVL/view?usp=sharing",
+    "https://drive.google.com/file/d/1pHM-LtOSuifPF1iUp0AYX72a7kRlNEJr/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/abishek-mahenderaraja-188286169/",
   twitter: "https://twitter.com/Abi_Mahen_012/",
   insta: "https://www.instagram.com/abi__1203_/",
